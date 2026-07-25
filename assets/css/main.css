@@ -1,0 +1,709 @@
+/* ==========================================================================
+   SYNC IN JOY — MAIN STYLESHEET
+   Built on Bootstrap 5.3 grid/utilities + locked tokens.css
+   Visual direction: Editorial, Quiet Luxury, Organic Minimalism.
+   Avoid: card-heavy layouts, SaaS UI, glassmorphism, blobs, generic icons.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------- 
+   BASE / RESET
+   ---------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-weight: var(--fw-regular);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  line-height: var(--lh-heading);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-editorial);
+}
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Centered 1280px container layered on top of Bootstrap's .container */
+.container-editorial {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+
+/* Overall page canvas cap at 1440px (design system desktop width) */
+.page-canvas {
+  max-width: var(--canvas-max);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+section {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+/* Accessible focus states — locked guardrail from Design Refinement v1.0 */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 3px;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-ink);
+  color: var(--color-cream);
+  padding: var(--space-xs) var(--space-md);
+  z-index: 1300;
+  border-radius: 0 0 var(--radius-md) 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* ----------------------------------------------------------------------
+   BUTTONS — editorial, restrained, no default Bootstrap look
+   ---------------------------------------------------------------------- */
+.btn-editorial {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-label);
+  padding: 16px 30px;
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  transition:
+    background-color var(--duration-base) var(--ease-editorial),
+    color var(--duration-base) var(--ease-editorial),
+    border-color var(--duration-base) var(--ease-editorial),
+    transform var(--duration-base) var(--ease-editorial);
+  white-space: nowrap;
+}
+.btn-editorial:active {
+  transform: translateY(1px);
+}
+
+.btn-primary-editorial {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+.btn-primary-editorial:hover {
+  background-color: var(--color-primary-hover);
+  color: #ffffff;
+}
+
+.btn-link-editorial {
+  color: var(--color-text);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-label);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 2px;
+}
+.btn-link-editorial:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-link-editorial svg {
+  transition: transform var(--duration-base) var(--ease-editorial);
+}
+.btn-link-editorial:hover svg {
+  transform: translateY(2px);
+}
+
+/* ----------------------------------------------------------------------
+   NAVIGATION
+   ---------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition:
+    border-color var(--duration-base) var(--ease-editorial),
+    box-shadow var(--duration-base) var(--ease-editorial),
+    background-color 0.35s ease;
+}
+.site-header.is-scrolled {
+  border-bottom-color: var(--color-border);
+  box-shadow: var(--shadow-soft);
+  background-color: rgba(245, 240, 232, 0.75); /* Cream with transparency */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* background-color: var(--color-cream); */
+}
+
+/* .navbar-editorial {
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+} */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  flex-shrink: 0;
+}
+.brand img {
+  height: 96px;
+  width: auto;
+}
+
+/* Nav row is intentionally tight so it never wraps at desktop widths
+   inside the 1280px container — see README-LOCKED-DECISIONS.md */
+.nav-links {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--space-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  flex-shrink: 0;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: var(--fw-regular);
+  color: var(--color-text);
+  position: relative;
+  padding-bottom: 4px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.nav-links a.active,
+.nav-links a.active:hover {
+  color: var(--color-primary);
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.nav-cta {
+  margin-left: var(--space-xs);
+  flex-shrink: 0;
+}
+.nav-cta .btn-editorial {
+  padding: 10px 24px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: var(--space-2xs);
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  z-index: var(--z-toggle);
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  margin: 5px 0;
+  transition:
+    transform var(--duration-base) var(--ease-editorial),
+    opacity var(--duration-base) var(--ease-editorial);
+}
+.nav-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Backdrop behind the off-canvas panel */
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(46, 42, 26, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--duration-slow) var(--ease-editorial),
+    visibility 0s linear var(--duration-slow);
+  z-index: var(--z-nav);
+}
+.nav-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity var(--duration-slow) var(--ease-editorial),
+    visibility 0s;
+}
+
+/* Explicit close (X) button inside the off-canvas panel — desktop-hidden */
+.nav-close-item {
+  display: none;
+}
+.nav-close {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: var(--space-2xs);
+}
+
+/* Off-canvas mobile/tablet menu: slides in from the right, 80% width */
+@media (max-width: 991.98px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-toggle.is-open {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    max-width: 380px;
+    height: 100dvh;
+    background-color: var(--color-bg);
+    box-shadow: -12px 0 40px rgba(46, 42, 26, 0.18);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 88px var(--space-lg) var(--space-xl);
+    gap: var(--space-lg);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition:
+      transform var(--duration-slow) var(--ease-editorial),
+      visibility 0s linear var(--duration-slow);
+    overflow-y: auto;
+    z-index: var(--z-overlay);
+  }
+  .nav-links.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    transition:
+      transform var(--duration-slow) var(--ease-editorial),
+      visibility 0s;
+  }
+  .nav-close-item {
+    display: block;
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+  }
+  .nav-close {
+    display: flex;
+  }
+  .nav-links a {
+    font-size: var(--fs-h3);
+    /* font-family: var(--font-heading); */
+    white-space: normal;
+  }
+  .nav-links a:not(.btn-editorial) {
+    font-size: var(--fs-h3);
+    font-family: var(--font-heading);
+    white-space: normal;
+  }
+  .nav-cta {
+    margin-left: 0;
+    margin-top: var(--space-sm);
+    width: 100%;
+  }
+  .nav-cta .btn-editorial {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 30px;
+    font-size: var(--fs-label);
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-links {
+    width: 86%;
+    padding-top: 80px;
+  }
+}
+
+/* ----------------------------------------------------------------------
+   HERO — Editorial split, full-bleed photo layer (locked layout)
+   The photo sits as a background layer bled to the canvas edge; the copy
+   sits in a foreground container above it. This matches the reference
+   design's "whole background image with shading" treatment.
+   ---------------------------------------------------------------------- */
+.hero {
+  position: relative;
+  padding-bottom: var(--space-2xl);
+
+  min-height: clamp(560px, 92vh, 960px);
+  display: block; /* was: flex + align-items:center */
+  padding-top: var(--space-sm);
+}
+.hero-content {
+  padding-top: var(--space-lg);
+  padding-left: var(--space-xl);
+}
+
+/* Photo layer — full width on mobile (overridden below), anchored to the
+   right and narrowed to ~60% on desktop so the subject reads clearly
+   toward the right of the frame instead of centered across the whole hero */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* @media (min-width: 992px) {
+  .hero-bg {
+    width: 62%;
+  }
+} */
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 78% center;
+  transform: none;
+}
+
+/* Soft blend from the cream background into the photo — the "shaded" effect.
+   Scoped to hero-bg's own box so it always fades from its left edge. */
+.hero-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      #f5f0e8 0%,
+      rgba(245, 240, 232, 0.95) 8%,
+      rgba(245, 240, 232, 0.45) 33%,
+      rgba(245, 240, 232, 0) 48%
+    ),
+    radial-gradient(
+      circle at left center,
+      rgba(245, 240, 232, 0.25),
+      transparent 70%
+    );
+}
+
+@media (min-width: 1300px) {
+  .hero .container-editorial {
+    max-width: 100%;
+    padding-left: clamp(64px, 6vw, 120px);
+    padding-right: clamp(64px, 6vw, 120px);
+  }
+}
+@media (max-width: 991.98px) {
+  .hero-bg-gradient {
+    background: linear-gradient(
+      90deg,
+      rgba(245, 240, 232, 0.35) 0%,
+      rgba(245, 240, 232, 0) 18%
+    );
+  }
+}
+
+/* Bottom grounding + faint warm color-grade so the photo sits calmly
+   inside the palette rather than reading as a raw stock photo */
+.hero-bg-tint {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(46, 42, 26, 0.08), rgba(46, 42, 26, 0) 40%),
+    linear-gradient(rgba(196, 112, 58, 0.02), rgba(196, 112, 58, 0.02));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 46% 54%;
+  }
+}
+
+.hero-copy {
+  max-width: 640px;
+}
+
+/* Reserves the right-hand columns on desktop so copy never runs
+   under the photo, even though the photo itself is a background layer */
+.hero-visual-spacer {
+  display: none;
+}
+@media (min-width: 992px) {
+  .hero-visual-spacer {
+    display: block;
+  }
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--fs-label-sm);
+  letter-spacing: var(--ls-label-md);
+  color: var(--color-secondary);
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+
+.hero-eyebrow::before {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background-color: var(--color-secondary);
+  position: absolute;
+  bottom: -4px;
+}
+
+.hero-title {
+  font-size: clamp(70px, 7vw, 88px);
+  margin-bottom: var(--space-md);
+}
+
+.hero-title span {
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+.hero-rule {
+  width: 124px;
+  height: 1px;
+  background-color: var(--color-primary);
+  border: none;
+  margin: 0 0 var(--space-lg) 0;
+}
+
+.hero-subhead {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 1.4vw + 1rem, 28px);
+  font-weight: var(--fw-regular);
+  line-height: 1.55;
+  max-width: 28rem;
+  color: var(--color-text);
+  margin-bottom: var(--space-xl);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-md);
+  max-width: 100%;
+}
+.hero-actions .btn-primary-editorial,
+.hero-actions .btn-link-editorial {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  font-size: var(--fs-label);
+  color: var(--color-text);
+  padding-left: var(--space-sm);
+  border-left: 2px solid var(--color-secondary);
+}
+.hero-meta .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-sage);
+  display: inline-block;
+}
+
+/* Mobile / tablet: photo drops below the copy as a normal full-width
+   block instead of a background layer (no room to bleed behind text) */
+@media (max-width: 991.98px) {
+  .hero-bg img {
+    filter: brightness(1.35) saturate(0.4) contrast(0.9);
+    opacity: 0.35;
+  }
+
+  .hero-bg-gradient {
+    background: linear-gradient(
+      180deg,
+      #f5f0e8 0%,
+      #f5f0e8 45%,
+      rgba(245, 240, 232, 0.92) 65%,
+      rgba(245, 240, 232, 0.75) 100%
+    );
+  }
+
+  .hero-bg-tint {
+    background: rgba(245, 240, 232, 0.35);
+  }
+}
+
+.hero-scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-md);
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bob 2.4s var(--ease-editorial) infinite;
+  z-index: 2;
+}
+
+@media (max-width: 991.98px) {
+  .hero-scroll-cue {
+    display: none;
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-cue {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-actions {
+    gap: var(--space-sm);
+  }
+  .hero-actions .btn-primary-editorial {
+    padding: 14px 20px;
+    font-size: 13px;
+  }
+  .hero-actions .btn-link-editorial {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1170px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+  }
+  .hero-bg-gradient {
+    background: linear-gradient(
+      90deg,
+      #f5f0e8 0%,
+      rgba(245, 240, 232, 0.95) 15%,
+      rgba(245, 240, 232, 0.6) 40%,
+      rgba(245, 240, 232, 0) 58%
+    );
+  }
+}

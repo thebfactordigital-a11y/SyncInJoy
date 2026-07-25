@@ -1,0 +1,105 @@
+/* ==========================================================================
+   SYNC IN JOY — LOCKED DESIGN TOKENS
+   Source of truth: Project Lock v3.0 + Final Website Content + Design Refinement v1.0
+   DO NOT override these values per-section. Every section pulls from here.
+   ========================================================================== */
+
+:root {
+  /* ----------------------------------------------------------------------
+     COLOR PALETTE (logo-derived, locked)
+     Rule: Orange leads (primary), Blue is secondary — never reversed.
+     ---------------------------------------------------------------------- */
+  --color-clay-orange: #c4703a; /* primary accent — buttons, links, hero accents, dividers */
+  --color-clay-orange-dark: #a85d2e; /* hover/active state, derived, not a new brand color */
+  --color-muted-blue: #4b5e8c; /* secondary accent — secondary buttons, quiet highlights */
+  --color-sage: #8a9678; /* tertiary accent — small labels, icons, sparingly */
+  --color-cream: #f5f0e8; /* main background — warm, not stark white */
+  --color-ink: #2e2a26; /* body copy + headings — warm charcoal, not pure black */
+
+  /* Functional aliases (semantic naming for use in components) */
+  --color-bg: var(--color-cream);
+  --color-text: var(--color-ink);
+  --color-primary: var(--color-clay-orange);
+  --color-primary-hover: var(--color-clay-orange-dark);
+  --color-secondary: var(--color-muted-blue);
+  --color-accent: var(--color-sage);
+  --color-surface: #ffffff; /* utility white for cards/forms where needed, used sparingly */
+  --color-border: rgba(46, 42, 38, 0.12);
+
+  /* ----------------------------------------------------------------------
+     TYPOGRAPHY (locked)
+     Headings: Cormorant Garamond | Body: Work Sans
+     ---------------------------------------------------------------------- */
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Work Sans", sans-serif;
+
+  /* Locked size ranges — clamp() used to stay within the approved min/max */
+  --fs-h1: clamp(40px, 4vw + 1rem, 56px); /* H1 / Hero: 40–56px */
+  --fs-h2: clamp(28px, 2vw + 1rem, 34px); /* H2 / Section titles: 28–34px */
+  --fs-h3: clamp(
+    22px,
+    1.4vw + 1rem,
+    28px
+  ); /* derived sub-heading, not in lock doc but consistent scale */
+  --fs-body: clamp(16px, 0.3vw + 1rem, 18px); /* Body text: 16–18px */
+  --fs-label: clamp(14px, 0.2vw + 1rem, 16px); /* Buttons / labels: 14–16px */
+  --fs-label-sm: clamp(10px, 0.1vw + 1rem, 12px);
+
+  --lh-body: 1.6; /* Body line-height: locked */
+  --lh-heading: 1.15;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  --ls-label: 0.5px; /* Buttons/labels letter-spacing: +0.5px, locked */
+  --ls-label-md: 3px;
+  /* ----------------------------------------------------------------------
+     LAYOUT / GRID (locked)
+     Desktop canvas 1440px, centered 1280px container, 12-column grid
+     ---------------------------------------------------------------------- */
+  --canvas-max: 1440px;
+  --container-max: 1280px;
+  --grid-columns: 12;
+  --grid-gutter: 24px;
+
+  /* Spacing scale — generous whitespace per Visual Direction lock */
+  --space-3xs: 4px;
+  --space-2xs: 8px;
+  --space-xs: 12px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 96px;
+  --space-3xl: 140px;
+
+  /* Section vertical rhythm — "generous white space between sections" */
+  --section-padding-y: clamp(64px, 8vw, 140px);
+
+  /* ----------------------------------------------------------------------
+     RADIUS / ELEVATION
+     Editorial, not SaaS — restrained radius, no glassmorphism/blobs
+     ---------------------------------------------------------------------- */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-pill: 100px; /* for pill buttons only */
+  --shadow-soft: 0 12px 32px rgba(46, 42, 38, 0.08);
+
+  /* ----------------------------------------------------------------------
+     MOTION — deliberately minimal (no parallax / auto-play / pop-ups)
+     ---------------------------------------------------------------------- */
+  --ease-editorial: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+
+  /* ----------------------------------------------------------------------
+     Z-INDEX SCALE
+     ---------------------------------------------------------------------- */
+  --z-nav: 1000;
+  --z-overlay: 1100;
+  --z-toggle: 1150;
+  --z-modal: 1200;
+}
