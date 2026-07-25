@@ -18,18 +18,25 @@
   /* ---------------------------------------------------------------------
      Mobile / tablet off-canvas nav (opens from the right, 80% width)
      --------------------------------------------------------------------- */
+  var scrollY = 0;
+
   function openNav() {
+    scrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = "-" + scrollY + "px";
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+
     navLinks.classList.add("is-open");
     navToggle.classList.add("is-open");
     navToggle.setAttribute("aria-expanded", "true");
     if (navBackdrop) {
       navBackdrop.hidden = false;
-      // next frame so the transition actually animates in
       requestAnimationFrame(function () {
         navBackdrop.classList.add("is-open");
       });
     }
-    document.body.style.overflow = "hidden";
   }
 
   function closeNav() {
@@ -40,9 +47,15 @@
       navBackdrop.classList.remove("is-open");
       setTimeout(function () {
         navBackdrop.hidden = true;
-      }, 400); // match --duration-slow
+      }, 400);
     }
-    document.body.style.overflow = "";
+
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    window.scrollTo(0, scrollY);
   }
 
   if (navToggle && navLinks) {

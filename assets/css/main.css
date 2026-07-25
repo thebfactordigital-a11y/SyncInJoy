@@ -528,7 +528,7 @@ button:focus-visible,
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-xs);
+  line-height: 30px;
   font-size: var(--fs-label-sm);
   letter-spacing: var(--ls-label-md);
   color: var(--color-secondary);
@@ -626,6 +626,9 @@ button:focus-visible,
 
   .hero-bg-tint {
     background: rgba(245, 240, 232, 0.35);
+  }
+  .hero-content {
+    padding-left: var(--space-lg);
   }
 }
 
