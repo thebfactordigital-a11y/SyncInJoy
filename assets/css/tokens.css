@@ -41,6 +41,7 @@
     1.4vw + 1rem,
     28px
   ); /* derived sub-heading, not in lock doc but consistent scale */
+  --fs-h4: clamp(18px, 1.2vw + 1rem, 22px);
   --fs-body: clamp(16px, 0.3vw + 1rem, 18px); /* Body text: 16–18px */
   --fs-label: clamp(14px, 0.2vw + 1rem, 16px); /* Buttons / labels: 14–16px */
   --fs-label-sm: clamp(10px, 0.1vw + 1rem, 12px);
@@ -69,7 +70,9 @@
   --space-xs: 12px;
   --space-sm: 16px;
   --space-md: 24px;
+  --space-md-m: 32px;
   --space-lg: 40px;
+  --space-lg-l: 56px;
   --space-xl: 64px;
   --space-2xl: 96px;
   --space-3xl: 140px;
@@ -84,6 +87,7 @@
   --radius-sm: 2px;
   --radius-md: 4px;
   --radius-lg: 8px;
+  --radius-xl: 14px;
   --radius-pill: 100px; /* for pill buttons only */
   --shadow-soft: 0 12px 32px rgba(46, 42, 38, 0.08);
 
@@ -102,4 +106,14 @@
   --z-overlay: 1100;
   --z-toggle: 1150;
   --z-modal: 1200;
+
+  /* Approach section — was hardcoded, now tokenized */
+  --fs-quote-mark: 34px;
+  --approach-min-h: 640px;
+  --approach-mobile-visual-h: 320px;
+  --approach-img-pos: 60% center;
+
+  /* Footer */
+  --color-footer-bg: var(--color-ink);
+  --color-footer-text: var(--color-cream);
 }

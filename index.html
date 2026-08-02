@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sync in Joy — Private 1:1 Yoga Sessions with Simran</title>
+    <title>Sync in Joy - Private 1:1 Yoga Sessions with Simran</title>
     <meta
       name="description"
-      content="No two students get the same session. Private, 1:1 yoga sessions over Zoom, shaped around your body, week, and mind — not a fixed class type. Book a free 15-minute intro call."
+      content="No two students get the same session. Private, 1:1 yoga sessions over Zoom, shaped around your body, week, and mind - not a fixed class type. Book a free 15-minute intro call."
     />
 
     <!-- Preconnect for font performance -->
@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
 
-    <!-- Bootstrap 5.3 (grid + utilities only — visual styling is custom, see main.css) -->
+    <!-- Bootstrap 5.3 (grid + utilities only - visual styling is custom, see main.css) -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -36,196 +36,1736 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <div class="page-canvas">
-      <!-- Full-bleed photo layer — sits behind the copy, bleeds to the canvas edge -->
-      <div class="hero-bg" aria-hidden="false">
-        <img
-          src="assets/images/hero-placeholder.png"
-          alt="Simran seated in a calm, sunlit studio, eyes closed, hands in prayer position"
-          width="1535"
-          height="1024"
-          loading="eager"
-          fetchpriority="high"
-        />
-        <div class="hero-bg-gradient"></div>
-        <div class="hero-bg-tint"></div>
-      </div>
+      <main id="main-content">
+        <!-- Full-bleed photo layer - sits behind the copy, bleeds to the canvas edge -->
+        <div class="nav-hero-wrap">
+          <div class="hero-bg" aria-hidden="false">
+            <img
+              src="assets/images/hero.png"
+              alt="Simran seated in a calm, sunlit studio, eyes closed, hands in prayer position"
+              width="1535"
+              height="1024"
+              loading="eager"
+              fetchpriority="high"
+            />
+            <div class="hero-bg-gradient"></div>
+            <div class="hero-bg-tint"></div>
+            <div class="hero-bg-fade"></div>
+          </div>
 
-      <!-- ==================================================================
+          <!-- ==================================================================
          NAVIGATION
          ================================================================== -->
-      <header class="site-header" id="siteHeader">
-        <nav
-          class="navbar navbar-expand-lg navbar-editorial"
-          aria-label="Primary"
-        >
-          <div
-            class="container-editorial d-flex align-items-center justify-content-between"
-          >
-            <a class="brand" href="#home" aria-label="Sync in Joy — home">
-              <img
-                src="assets/images/logo.png"
-                alt="Sync in Joy Yogic Center logo"
-                width="88"
-                height="96"
-              />
-            </a>
-
-            <button
-              class="nav-toggle"
-              id="navToggle"
-              aria-expanded="false"
-              aria-controls="navLinks"
-              aria-label="Toggle menu"
+          <header class="site-header" id="siteHeader">
+            <nav
+              class="navbar navbar-expand-lg navbar-editorial"
+              aria-label="Primary"
             >
-              <span></span><span></span><span></span>
-            </button>
+              <div
+                class="container-editorial d-flex align-items-center justify-content-between"
+              >
+                <a class="brand" href="#home" aria-label="Sync in Joy - home">
+                  <img
+                    src="assets/images/logo.png"
+                    alt="Sync in Joy Yogic Center logo"
+                    width="88"
+                    height="96"
+                  />
+                </a>
 
-            <div class="nav-backdrop" id="navBackdrop" hidden></div>
-
-            <ul class="nav-links" id="navLinks">
-              <li class="nav-close-item">
                 <button
-                  type="button"
-                  class="nav-close"
-                  id="navClose"
-                  aria-label="Close menu"
+                  class="nav-toggle"
+                  id="navToggle"
+                  aria-expanded="false"
+                  aria-controls="navLinks"
+                  aria-label="Toggle menu"
                 >
+                  <span></span><span></span><span></span>
+                </button>
+
+                <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+                <ul class="nav-links" id="navLinks">
+                  <li class="nav-close-item">
+                    <button
+                      type="button"
+                      class="nav-close"
+                      id="navClose"
+                      aria-label="Close menu"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M5 5L15 15M15 5L5 15"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li><a href="#home" class="active">Home</a></li>
+                  <li><a href="#offer">What I Offer</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#sessions">Sessions</a></li>
+                  <li><a href="#faq">FAQ</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <li class="nav-cta">
+                    <a
+                      href="#contact"
+                      class="btn-editorial btn-primary-editorial"
+                      >Book a Free 15-Min Intro Call
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M3 8H13M13 8L9 4M13 8L9 12"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+
+          <!-- ================================================================
+           1. HERO - Editorial split (locked layout, Project Lock v3.0)
+           ================================================================ -->
+          <section class="hero" id="home">
+            <div class="container-editorial hero-content">
+              <div class="hero-grid">
+                <div class="hero-copy">
+                  <span class="hero-eyebrow"
+                    >PERSONALIZED YOGA • BREATHWORK • WELLNESS</span
+                  >
+
+                  <h1 class="hero-title">Sync in <span>Joy</span></h1>
+                  <hr class="hero-rule" />
+
+                  <p class="hero-subhead">
+                    No two students get the same session. That's not a feature -
+                    that's the whole point.
+                  </p>
+
+                  <div class="hero-actions">
+                    <a
+                      href="#contact"
+                      class="btn-editorial btn-primary-editorial"
+                    >
+                      Book a Free 15-Min Intro Call
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M3 8H13M13 8L9 4M13 8L9 12"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                    <a href="#approach" class="btn-link-editorial">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M8 3V13M8 13L4 9M8 13L12 9"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Learn My Approach
+                    </a>
+                  </div>
+
+                  <p class="hero-meta">
+                    <span>Private 1:1 Sessions</span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span>Worldwide via Zoom</span>
+                  </p>
+                </div>
+
+                <!-- Empty spacer column - keeps copy in the left ~5/12 columns so it
+                 never overlaps the full-bleed photo layer sitting behind it -->
+                <div class="hero-visual-spacer" aria-hidden="true"></div>
+              </div>
+            </div>
+
+            <a
+              href="#offer"
+              class="hero-scroll-cue"
+              aria-label="Scroll to What I Offer"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M8 3V13M8 13L4 9M8 13L12 9"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </section>
+        </div>
+        <!-- ================================================================
+           Sections below are structural placeholders per Project Lock v3.0
+           UX Flow. Content build proceeds section-by-section after Hero
+           sign-off. Do not remove - anchors are wired from the nav above.
+           ================================================================ -->
+        <!-- <section id="offer"></section> -->
+
+        <!-- ============================================================
+     2. WHAT I OFFER - Sticky-left editorial list (v2)
+     Replaces old alternating-rows structure. Left col (eyebrow + title +
+     desc) sticks while right col rows scroll past - scales cleanly as
+     more offerings are added later without leaving dead space.
+     ============================================================ -->
+        <section class="offer" id="offer">
+          <div class="container-editorial">
+            <div class="offer-layout">
+              <!-- LEFT - sticky heading column -->
+              <div class="offer-intro">
+                <span class="offer-eyebrow">WHAT I OFFER</span>
+                <h2 class="offer-title">
+                  Before we begin, we talk - about your work, your lifestyle,
+                  what you're carrying.
+                </h2>
+                <p class="offer-subhead">
+                  That conversation decides where we start, not a fixed class
+                  type.
+                </p>
+              </div>
+
+              <!-- RIGHT - numbered offering rows -->
+              <div class="offer-list">
+                <div class="offer-item">
+                  <span class="offer-item-num">01</span>
+                  <div class="offer-item-icon">
+                    <img
+                      src="assets/images/icon-1.png"
+                      alt="Icon representing inward, reflective movement"
+                      width="64"
+                      height="64"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="offer-item-copy">
+                    <h3 class="offer-item-name">Sync in Yourself</h3>
+                    <p class="offer-item-desc">
+                      Move until something shakes loose. Then sit still with
+                      what's left.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="offer-item">
+                  <span class="offer-item-num">02</span>
+                  <div class="offer-item-icon">
+                    <img
+                      src="assets/images/icon-2.png"
+                      alt="Icon representing balance and steadiness"
+                      width="64"
+                      height="64"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="offer-item-copy">
+                    <h3 class="offer-item-name">Sync with Balance</h3>
+                    <p class="offer-item-desc">
+                      Stand on one leg, close your eyes, and find out how steady
+                      your mind actually is.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="offer-item">
+                  <span class="offer-item-num">03</span>
+                  <div class="offer-item-icon">
+                    <img
+                      src="assets/images/icon-3.png"
+                      alt="Icon representing the spine and release"
+                      width="64"
+                      height="64"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="offer-item-copy">
+                    <h3 class="offer-item-name">Sync with Spine</h3>
+                    <p class="offer-item-desc">
+                      The spine holds what the mind won't say. This is how it
+                      lets go.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="offer-item">
+                  <span class="offer-item-num">04</span>
+                  <div class="offer-item-icon">
+                    <img
+                      src="assets/images/icon-4.png"
+                      alt="Icon representing breath and life force"
+                      width="64"
+                      height="64"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="offer-item-copy">
+                    <h3 class="offer-item-name">Sync with Prana</h3>
+                    <p class="offer-item-desc">
+                      Not breathing exercises. Learning to feel the force breath
+                      is carrying.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="offer-item offer-item--last">
+                  <span class="offer-item-num">05</span>
+                  <div class="offer-item-icon">
+                    <img
+                      src="assets/images/icon-5.png"
+                      alt="Icon representing grounding and stability"
+                      width="64"
+                      height="64"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="offer-item-copy">
+                    <h3 class="offer-item-name">Sync with Roots</h3>
+                    <p class="offer-item-desc">
+                      A single teaching, held long enough to actually change
+                      something.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="offer-closing">
+                  <p class="offer-more">
+                    More sequences, coming as they're developed.
+                  </p>
+                  <p class="offer-fit">
+                    Which one fits you, we figure out together.
+                  </p>
+                </div>
+              </div>
+              <!-- /offer-list -->
+            </div>
+          </div>
+        </section>
+        <!-- <section id="approach"></section> -->
+        <!-- <section id="approach"></section> -->
+        <!-- ============================================================
+     3. THE SYNC IN JOY APPROACH - v2
+     Boxed rounded-photo top + 3-col principle icons below.
+     Replaces old 46/54 connected-philosophy split.
+     ============================================================ -->
+        <section class="approach" id="approach">
+          <div class="container-editorial">
+            <div class="approach-top">
+              <div class="approach-copy">
+                <span class="approach-eyebrow">THE SYNC IN JOY APPROACH</span>
+                <h2 class="approach-title">
+                  Not just how we practice.<br />
+                  <em>Why every practice begins with you.</em>
+                </h2>
+                <p class="approach-lede">
+                  Sync in Joy is built on the belief that yoga should adapt to
+                  the person - not the other way around.
+                </p>
+                <p class="approach-lede">
+                  Every session begins by understanding where you are today, so
+                  your practice can support where you're ready to go.
+                </p>
+
+                <blockquote class="approach-mini-quote">
+                  Every practice begins with a conversation.
+                </blockquote>
+              </div>
+
+              <div class="approach-visual">
+                <img
+                  src="assets/images/approach.png"
+                  alt="Simran seated cross-legged in meditation, eyes closed, in a sunlit room"
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="approach-divider" aria-hidden="true"></div>
+
+            <div class="approach-principles">
+              <div class="approach-principle">
+                <span class="approach-num">01</span>
+                <span class="approach-num-rule" aria-hidden="true"></span>
+                <h3>Personal Practice</h3>
+                <p>Your body, your lifestyle, your pace shape every session.</p>
+              </div>
+
+              <div class="approach-principle">
+                <span class="approach-num">02</span>
+                <span class="approach-num-rule" aria-hidden="true"></span>
+                <h3>Mindful Progress</h3>
+                <p>Growth measured by consistency, not difficult poses.</p>
+              </div>
+
+              <div class="approach-principle approach-principle--last">
+                <span class="approach-num">03</span>
+                <span class="approach-num-rule" aria-hidden="true"></span>
+                <h3>Beyond the Mat</h3>
+                <p>
+                  Awareness that carries into work, relationships, everyday
+                  life.
+                </p>
+              </div>
+            </div>
+
+            <div class="approach-closing-bar">
+              <p class="approach-closing-question">
+                Ready to experience a practice designed around you?
+              </p>
+              <a href="#contact" class="btn-editorial btn-primary-editorial">
+                Book a Free 15-Min Intro Call
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8H13M13 8L9 4M13 8L9 12"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- <section id="about"></section> -->
+
+        <section class="story" id="about">
+          <div class="container-editorial">
+            <div class="story-grid">
+              <div class="story-copy">
+                <span class="story-eyebrow">MY JOURNEY</span>
+                <h2 class="story-title">Why I Teach</h2>
+
+                <p class="story-text">
+                  <strong>I didn't come to yoga ready to teach.</strong> I came
+                  in 2019, in the middle of a tough chapter of my life, looking
+                  for a way out of my own head.
+                </p>
+                <p class="story-text">
+                  What I found was <strong>yoga</strong> - not as a quick fix,
+                  but as a path that
+                  <em
+                    ><strong
+                      >slowly showed me how to come back to myself.</strong
+                    ></em
+                  >
+                </p>
+                <p class="story-text">
+                  Over the years, I trained deeply across different traditions
+                  and three places, before I felt ready to call this my life's
+                  work.
+                </p>
+                <p class="story-text">
+                  Yoga isn't just asana - it asks who you are beneath the
+                  layers.
+                  <strong>I still walk this path every day.</strong>
+                </p>
+                <blockquote class="story-quote">
+                  <span class="story-quote-mark" aria-hidden="true"
+                    >&ldquo;</span
+                  >
+                  <p>
+                    I'm not offering you a finished person - I'm simply a few
+                    steps further down the same path, still walking it.
+                  </p>
+                </blockquote>
+              </div>
+              <div class="story-visual">
+                <div class="story-image-card">
+                  <img
+                    class="story-image"
+                    src="assets/images/story.png"
+                    alt="Simran mid-practice, standing balance pose, in a sunlit studio"
+                    width="1200"
+                    height="1500"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="story-badges">
+                  <div class="story-badge">
+                    <span class="story-badge-icon" aria-hidden="true">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <rect
+                          x="2"
+                          y="3"
+                          width="12"
+                          height="11"
+                          rx="1.5"
+                          stroke="currentColor"
+                          stroke-width="1.3"
+                        />
+                        <path
+                          d="M2 6.5H14M5 2V4M11 2V4"
+                          stroke="currentColor"
+                          stroke-width="1.3"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </span>
+                    <div>
+                      <span class="story-badge-value">2019</span>
+                      <span class="story-badge-label"
+                        >Began my<br />yoga journey</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="story-badge">
+                    <span
+                      class="story-badge-icon story-badge-icon--sage"
+                      aria-hidden="true"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <!-- certificate/document body -->
+                        <rect
+                          x="3"
+                          y="2.5"
+                          width="14"
+                          height="10.5"
+                          rx="1.3"
+                          stroke="currentColor"
+                          stroke-width="1.3"
+                        />
+                        <path
+                          d="M6 6h8M6 8.5h8M6 11h5"
+                          stroke="currentColor"
+                          stroke-width="1.1"
+                          stroke-linecap="round"
+                        />
+
+                        <!-- ribbon seal hanging bottom-center -->
+                        <circle
+                          cx="10"
+                          cy="14.5"
+                          r="2.6"
+                          stroke="currentColor"
+                          stroke-width="1.2"
+                        />
+                        <path
+                          d="M8.5 16.6 8 19l2-1.1 2 1.1-.5-2.4"
+                          stroke="currentColor"
+                          stroke-width="1.1"
+                          stroke-linejoin="round"
+                        />
+
+                        <!-- check mark inside seal -->
+                        <path
+                          d="M8.9 14.5l.8.8 1.6-1.6"
+                          stroke="currentColor"
+                          stroke-width="1.1"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div>
+                      <span class="story-badge-value">Certified</span>
+                      <span class="story-badge-label">Yoga Teacher</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="story-bottom">
+              <div class="story-note">
+                <span class="story-note-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M8 14C8 14 2 10.2 2 6.2C2 4.2 3.6 2.7 5.5 2.7C6.5 2.7 7.4 3.2 8 4C8.6 3.2 9.5 2.7 10.5 2.7C12.4 2.7 14 4.2 14 6.2C14 10.2 8 14 8 14Z"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                    />
+                  </svg>
+                </span>
+                <p>
+                  Every session is personalised - not a fixed routine, but a
+                  practice that meets you exactly where you are.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-strip">
+            <p>
+              Still learning. Still growing. Still walking the path - together.
+            </p>
+          </div>
+        </section>
+        <!-- <section id="sessions"></section> -->
+        <section class="sessions" id="sessions">
+          <div class="container-editorial sessions-grid">
+            <div class="sessions-copy">
+              <span class="sessions-eyebrow">HOW SESSIONS WORK</span>
+
+              <h2 class="sessions-title">
+                A Practice That Moves With You, Not a Fixed Format
+              </h2>
+              <p class="sessions-text">
+                Every practice starts with a conversation - about your work,
+                your week, what your body and mind are actually asking for right
+                now. That's what decides the session, not a fixed format.
+              </p>
+              <blockquote class="sessions-quote">
+                <p>
+                  Some elements repeat on purpose - mastery asks for that. The
+                  session around them still <em>moves with you.</em>
+                </p>
+              </blockquote>
+              <p class="sessions-text">
+                Private 1:1 sessions over Zoom, 60 minutes of focused time built
+                entirely around you.
+              </p>
+            </div>
+
+            <div class="sessions-timeline">
+              <div class="sessions-step">
+                <span class="sessions-dot" aria-hidden="true"></span>
+                <span class="sessions-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 4C6.5 4 3 7.6 3 12c0 2.2 1 4.1 2.6 5.5-.1 1-.5 2.3-1.2 3.3 1.5-.2 2.9-.8 4-1.5 1.1.4 2.4.7 3.6.7 5.5 0 9-3.6 9-8s-3.5-8-9-8Z"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <div class="sessions-step-body">
+                  <h3>Conversation First</h3>
+                  <p>
+                    Every session begins by understanding how you're arriving
+                    today - physically, mentally, and emotionally.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sessions-step">
+                <span class="sessions-dot" aria-hidden="true"></span>
+                <span class="sessions-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle
+                      cx="12"
+                      cy="5"
+                      r="2.1"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                    />
+                    <path
+                      d="M12 8.5v3.5M8 20c.3-2.8 1.8-4.5 4-4.5s3.7 1.7 4 4.5M6 15.5C7.5 13 9.5 12 12 12s4.5 1 6 3.5"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <div class="sessions-step-body">
+                  <h3>Monday to Thursday</h3>
+                  <p>
+                    Movement, breath, and creative practice shaped around what
+                    your body needs that day.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sessions-step">
+                <span class="sessions-dot" aria-hidden="true"></span>
+                <!-- Friday: Deep Practice - crescent moon + sparkle -->
+                <span class="sessions-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M15.8 3.8A8 8 0 1 0 20.2 17.2 6.4 6.4 0 0 1 15.8 3.8Z"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19.5 3.5l.4 1.2 1.2.4-1.2.4-.4 1.2-.4-1.2-1.2-.4 1.2-.4.4-1.2Z"
+                      stroke="currentColor"
+                      stroke-width="0.8"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <div class="sessions-step-body">
+                  <h3>Friday: Deep Practice</h3>
+                  <p>
+                    Pranayama, kriya, and the yoga sutras. Most practices never
+                    get here; this is where it stops being about the body.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sessions-step sessions-step--last">
+                <span class="sessions-dot" aria-hidden="true"></span>
+                <span class="sessions-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M4 5.8A2.3 2.3 0 0 1 6.3 3.5h7.4A2.3 2.3 0 0 1 16 5.8v4.4A2.3 2.3 0 0 1 13.7 12.5H9l-3 2.6v-2.6H6.3A2.3 2.3 0 0 1 4 10.2v-4.4Z"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M18 20.3c1.5-1.1 2.8-2.4 2.8-3.8 0-.9-.7-1.6-1.6-1.6-.5 0-1 .3-1.2.6-.2-.3-.7-.6-1.2-.6-.9 0-1.6.7-1.6 1.6 0 1.4 1.3 2.7 2.8 3.8Z"
+                      stroke="currentColor"
+                      stroke-width="1.1"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <div class="sessions-step-body">
+                  <h3>Between Sessions</h3>
+                  <p>
+                    A short check-in keeps you accountable to your own practice
+                    - not to a schedule.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <section id="credentials"></section> -->
+        <!-- ============================================================
+     6. CREDENTIALS - Editorial timeline (Project Lock v3.0)
+     Copy / certificate photo / timeline in three columns on desktop.
+     Stacks: copy → photo → timeline on tablet & mobile.
+     ============================================================ -->
+        <section class="credentials" id="credentials">
+          <div class="container-editorial">
+            <!-- <div class="credentials-grid">
+              <div class="credentials-copy">
+                <span class="credentials-eyebrow">CREDENTIALS</span>
+                <span class="credentials-rule" aria-hidden="true"></span>
+                <h2 class="credentials-title">
+                  Years of training, across three cities and two countries,
+                  before ever calling myself ready.
+                </h2>
+
+                <p class="credentials-desc">
+                  Every certification marked another stage of understanding - of
+                  the practice, the body, the mind, and what it truly means to
+                  teach.
+                </p>
+              </div>
+
+              <div class="credentials-visual">
+                <div class="credentials-image-card">
+                  <img
+                    src="assets/images/story-1.png"
+                    alt="Simran receiving her Advanced Yoga Teacher Training certificate at The Yoga Institute, Mumbai"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <ol class="credentials-timeline">
+                <li class="timeline-item">
+                  <span class="timeline-dot" aria-hidden="true"></span>
+                  <span class="timeline-year">2020</span>
+                  <h3 class="timeline-name">Advanced Yoga Teacher Training</h3>
+                  <span class="timeline-hours">900 HOURS</span>
+                  <p class="timeline-school">The Yoga Institute</p>
+                  <p class="timeline-city">MUMBAI</p>
+                </li>
+                <li class="timeline-item">
+                  <span class="timeline-dot" aria-hidden="true"></span>
+                  <span class="timeline-year">2022</span>
+                  <h3 class="timeline-name">Yoga Teacher Training</h3>
+                  <span class="timeline-hours">200 HOURS</span>
+                  <p class="timeline-school">YogaTree</p>
+                  <p class="timeline-city">TORONTO</p>
+                </li>
+                <li class="timeline-item">
+                  <span class="timeline-dot" aria-hidden="true"></span>
+                  <span class="timeline-year">2026</span>
+                  <h3 class="timeline-name">Yoga Teacher Training</h3>
+                  <span class="timeline-hours">200 HOURS</span>
+                  <p class="timeline-school">The Yoga Institute</p>
+                  <p class="timeline-city">RISHIKESH</p>
+                </li>
+              </ol>
+            </div> -->
+
+            <div class="credentials-grid">
+              <div class="credentials-copy">
+                <span class="credentials-eyebrow">CREDENTIALS</span>
+                <h2 class="credentials-title">
+                  Years of training, across three cities and two countries,
+                  before ever calling myself ready.
+                </h2>
+                <p class="credentials-desc">
+                  Every certification marked another stage of understanding — of
+                  the practice, the body, the mind, and what it truly means to
+                  teach.
+                </p>
+              </div>
+
+              <div class="credentials-visual">
+                <div class="credentials-image-card">
+                  <img
+                    src="assets/images/story-1.png"
+                    alt="Simran in a standing balance pose, sunlit studio"
+                    width="1200"
+                    height="900"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <ol class="credentials-timeline-h">
+              <li class="timeline-h-item">
+                <span class="timeline-h-dot" aria-hidden="true"></span>
+                <span class="timeline-year">2020</span>
+                <h3 class="timeline-name">Advanced Yoga Teacher Training</h3>
+                <span class="timeline-hours">900 HOURS</span>
+                <p class="timeline-school">The Yoga Institute</p>
+                <p class="timeline-city">MUMBAI</p>
+              </li>
+              <li class="timeline-h-item">
+                <span class="timeline-h-dot" aria-hidden="true"></span>
+                <span class="timeline-year">2022</span>
+                <h3 class="timeline-name">Yoga Teacher Training</h3>
+                <span class="timeline-hours">200 HOURS</span>
+                <p class="timeline-school">YogaTree</p>
+                <p class="timeline-city">TORONTO</p>
+              </li>
+              <li class="timeline-h-item">
+                <span class="timeline-h-dot" aria-hidden="true"></span>
+                <span class="timeline-year">2026</span>
+                <h3 class="timeline-name">Yoga Teacher Training</h3>
+                <span class="timeline-hours">200 HOURS</span>
+                <p class="timeline-school">The Yoga Institute</p>
+                <p class="timeline-city">RISHIKESH</p>
+              </li>
+            </ol>
+            <div class="credentials-divider" aria-hidden="true"></div>
+
+            <div class="training-meaning">
+              <div class="training-meaning-header">
+                <span class="training-eyebrow"
+                  >WHAT THIS TRAINING MEANS FOR YOU</span
+                >
+                <h2 class="training-title">
+                  Everything I've learned quietly shapes every session we share.
+                </h2>
+              </div>
+
+              <div class="training-points">
+                <div class="training-point">
+                  <span class="training-num">01</span>
+                  <span class="training-num-rule" aria-hidden="true"></span>
+                  <h3>Movement</h3>
+                  <span class="training-label">HATHA &amp; VINYASA</span>
+                  <p>
+                    Intelligent movement that builds strength, flexibility and
+                    awareness in a way that lasts.
+                  </p>
+                </div>
+                <div class="training-point">
+                  <span class="training-num">02</span>
+                  <span class="training-num-rule" aria-hidden="true"></span>
+                  <h3>Understanding</h3>
+                  <span class="training-label">YOGA PHILOSOPHY</span>
+                  <p>
+                    Ancient wisdom that brings clarity, perspective and meaning
+                    into modern life.
+                  </p>
+                </div>
+                <div class="training-point">
+                  <span class="training-num">03</span>
+                  <span class="training-num-rule" aria-hidden="true"></span>
+                  <h3>Safe Practice</h3>
+                  <span class="training-label">ANATOMY &amp; PHYSIOLOGY</span>
+                  <p>
+                    A deep respect for how the body works so you can practice
+                    with confidence and ease.
+                  </p>
+                </div>
+                <div class="training-point">
+                  <span class="training-num">04</span>
+                  <span class="training-num-rule" aria-hidden="true"></span>
+                  <h3>Personal Guidance</h3>
+                  <span class="training-label">TEACHING METHODOLOGY</span>
+                  <p>
+                    Thoughtful teaching that adapts to you, where you are, and
+                    what you truly need.
+                  </p>
+                </div>
+              </div>
+
+              <div class="training-closing">
+                <span class="training-closing-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 17C10 17 3 13 3 8.2C6 8.2 8.5 10 10 13C11.5 10 14 8.2 17 8.2C17 13 10 17 10 17Z"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                    />
+                    <path
+                      d="M10 3V13"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </span>
+                <p>
+                  So when you arrive, you receive guidance shaped by years of
+                  learning - not a one-size-fits-all routine.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <section id="gallery"></section> -->
+        <!-- ============================================================
+     7. GALLERY — Masonry (Project Lock v3.0)
+     Left: eyebrow/title/desc + tall portrait shot.
+     Right: 5-image masonry (tall left, 2 stacked top-right,
+     2 small squares mid, 2 stacked bottom-right).
+     Strip below: CTA line + single button.
+     ============================================================ -->
+        <section class="gallery" id="gallery">
+          <div class="container-editorial">
+            <div class="gallery-grid">
+              <div class="gallery-intro">
+                <span class="gallery-eyebrow">GALLERY</span>
+                <h2 class="gallery-title">Moments of Practice</h2>
+                <p class="gallery-desc">
+                  A glimpse into the space we create together — rooted in
+                  presence, guided by breath, and held with care.
+                </p>
+                <figure class="gallery-item gallery-item--intro">
+                  <img
+                    src="assets/images/gallery-1.png"
+                    alt="Simran seated, hand on chest, eyes closed"
+                    width="900"
+                    height="1000"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+
+              <div class="gallery-masonry">
+                <figure class="gallery-item gallery-item--tall">
+                  <img
+                    src="assets/images/gallery-2.png"
+                    alt="Simran guiding a student through a forward fold"
+                    width="1200"
+                    height="1400"
+                    loading="lazy"
+                  />
+                </figure>
+
+                <div class="gallery-col-right">
+                  <figure class="gallery-item gallery-item--top">
+                    <img
+                      src="assets/images/gallery-3.png"
+                      alt="Simran in seated meditation, sunlit room"
+                      width="1000"
+                      height="900"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <figure class="gallery-item gallery-item--small">
+                    <img
+                      src="assets/images/gallery-1.png"
+                      alt="Bare feet grounded on a woven mat"
+                      width="800"
+                      height="900"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <figure class="gallery-item gallery-item--small">
+                    <img
+                      src="assets/images/gallery-2.png"
+                      alt="Tea and journal beside the mat"
+                      width="800"
+                      height="900"
+                      loading="lazy"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-strip">
+            <div class="container-editorial gallery-strip-inner">
+              <div class="gallery-strip-copy">
+                <p class="gallery-strip-title">
+                  Ready to begin your own practice?
+                </p>
+                <p class="gallery-strip-sub">
+                  Every journey starts with a conversation.
+                </p>
+              </div>
+              <a href="#contact" class="btn-editorial btn-primary-editorial">
+                Book a Free 15-Min Intro Call
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8H13M13 8L9 4M13 8L9 12"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- <section id="faq"></section> -->
+        <!-- ============================================================
+     FAQ — Editorial accordion (Project Lock v3.0, UX Flow #8)
+     ============================================================ -->
+        <section class="faq" id="faq">
+          <div class="container-editorial">
+            <div class="faq-grid">
+              <div class="faq-intro">
+                <span class="faq-eyebrow">FAQ</span>
+                <h2 class="faq-title">Questions before we begin.</h2>
+                <p class="faq-lede">
+                  If you're wondering whether yoga is right for you, you're
+                  probably asking the same questions everyone asks before their
+                  first conversation.
+                </p>
+
+                <a href="#contact" class="btn-editorial btn-primary-editorial">
+                  Book a Free 15-Min Intro Call
                   <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
                     fill="none"
                     aria-hidden="true"
                   >
                     <path
-                      d="M5 5L15 15M15 5L5 15"
+                      d="M3 8H13M13 8L9 4M13 8L9 12"
                       stroke="currentColor"
                       stroke-width="1.5"
                       stroke-linecap="round"
+                      stroke-linejoin="round"
                     />
                   </svg>
-                </button>
-              </li>
-              <li><a href="#home" class="active">Home</a></li>
-              <li><a href="#offer">What I Offer</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#sessions">Sessions</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="nav-cta">
-                <a href="#contact" class="btn-editorial btn-primary-editorial"
-                  >Book a Free 15-Min Call</a
-                >
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-
-      <main id="main-content">
-        <!-- ================================================================
-           1. HERO — Editorial split (locked layout, Project Lock v3.0)
-           ================================================================ -->
-        <section class="hero" id="home">
-          <div class="container-editorial hero-content">
-            <div class="hero-grid">
-              <div class="hero-copy">
-                <span class="hero-eyebrow"
-                  >PERSONALIZED YOGA • BREATHWORK • WELLNESS</span
-                >
-
-                <h1 class="hero-title">Sync in <span>Joy</span></h1>
-                <hr class="hero-rule" />
-
-                <p class="hero-subhead">
-                  No two students get the same session. That's not a feature —
-                  that's the whole point.
-                </p>
-
-                <div class="hero-actions">
-                  <a
-                    href="#contact"
-                    class="btn-editorial btn-primary-editorial"
+                </a>
+                <p class="faq-note">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
                   >
-                    Book a Free 15-Min Intro Call
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M3 8H13M13 8L9 4M13 8L9 12"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
-                  <a href="#approach" class="btn-link-editorial">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M8 3V13M8 13L4 9M8 13L12 9"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Learn My Approach
-                  </a>
-                </div>
-
-                <p class="hero-meta">
-                  <span>Private 1:1 Sessions</span>
-                  <span class="dot" aria-hidden="true"></span>
-                  <span>Worldwide via Zoom</span>
+                    <rect
+                      x="3.5"
+                      y="7"
+                      width="9"
+                      height="6.5"
+                      rx="1.2"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                    />
+                    <path
+                      d="M5.5 7V5A2.5 2.5 0 0 1 10.5 5V7"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                  No obligation. Just a real conversation.
                 </p>
               </div>
 
-              <!-- Empty spacer column — keeps copy in the left ~5/12 columns so it
-                 never overlaps the full-bleed photo layer sitting behind it -->
-              <div class="hero-visual-spacer" aria-hidden="true"></div>
+              <div class="faq-list" id="faqList">
+                <div class="faq-item">
+                  <button
+                    class="faq-q"
+                    aria-expanded="false"
+                    aria-controls="faq-a-1"
+                    id="faq-btn-1"
+                  >
+                    <span class="faq-num">01</span>
+                    <span class="faq-question"
+                      >Do I need any yoga experience to start?</span
+                    >
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                  </button>
+                  <div
+                    class="faq-a"
+                    id="faq-a-1"
+                    role="region"
+                    aria-labelledby="faq-btn-1"
+                    hidden
+                  >
+                    <p>
+                      No. Complete beginners are welcome. The first conversation
+                      is about understanding where you are today—not testing
+                      what you already know.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button
+                    class="faq-q"
+                    aria-expanded="false"
+                    aria-controls="faq-a-2"
+                    id="faq-btn-2"
+                  >
+                    <span class="faq-num">02</span>
+                    <span class="faq-question"
+                      >How does the free intro call work?</span
+                    >
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                  </button>
+                  <div
+                    class="faq-a"
+                    id="faq-a-2"
+                    role="region"
+                    aria-labelledby="faq-btn-2"
+                    hidden
+                  >
+                    <p>
+                      It's a 15-minute conversation over Zoom, with no
+                      obligation. We'll talk about your work, your lifestyle,
+                      and what you're looking for—this is what shapes your
+                      sessions, not a fixed class type.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button
+                    class="faq-q"
+                    aria-expanded="false"
+                    aria-controls="faq-a-3"
+                    id="faq-btn-3"
+                  >
+                    <span class="faq-num">03</span>
+                    <span class="faq-question"
+                      >What happens after the intro call?</span
+                    >
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                  </button>
+                  <div
+                    class="faq-a"
+                    id="faq-a-3"
+                    role="region"
+                    aria-labelledby="faq-btn-3"
+                    hidden
+                  >
+                    <p>
+                      If it feels like the right fit for both of us, we'll
+                      schedule your first private session, and I'll send you a
+                      short intake form before we begin.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button
+                    class="faq-q"
+                    aria-expanded="false"
+                    aria-controls="faq-a-4"
+                    id="faq-btn-4"
+                  >
+                    <span class="faq-num">04</span>
+                    <span class="faq-question"
+                      >What do I need for a session?</span
+                    >
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                  </button>
+                  <div
+                    class="faq-a"
+                    id="faq-a-4"
+                    role="region"
+                    aria-labelledby="faq-btn-4"
+                    hidden
+                  >
+                    <p>
+                      A quiet space, comfortable clothing, and a yoga mat if you
+                      have one. Blocks, a bolster, or a strap can be helpful,
+                      but they're never required to begin.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button
+                    class="faq-q"
+                    aria-expanded="false"
+                    aria-controls="faq-a-5"
+                    id="faq-btn-5"
+                  >
+                    <span class="faq-num">05</span>
+                    <span class="faq-question">How much does this cost?</span>
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                  </button>
+                  <div
+                    class="faq-a"
+                    id="faq-a-5"
+                    role="region"
+                    aria-labelledby="faq-btn-5"
+                    hidden
+                  >
+                    <p>
+                      Because every practice is personalized, we'll discuss the
+                      most suitable session plan during your intro call. I'll
+                      explain the available options clearly, with no obligation
+                      to continue.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button
+                    class="faq-q"
+                    aria-expanded="false"
+                    aria-controls="faq-a-6"
+                    id="faq-btn-6"
+                  >
+                    <span class="faq-num">06</span>
+                    <span class="faq-question"
+                      >Can I reschedule a session?</span
+                    >
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                  </button>
+                  <div
+                    class="faq-a"
+                    id="faq-a-6"
+                    role="region"
+                    aria-labelledby="faq-btn-6"
+                    hidden
+                  >
+                    <p>
+                      Yes. With at least 24 hours' notice, we'll happily
+                      reschedule your session. Life changes, and the practice
+                      should work with you—not against you.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button
+                    class="faq-q"
+                    aria-expanded="false"
+                    aria-controls="faq-a-7"
+                    id="faq-btn-7"
+                  >
+                    <span class="faq-num">07</span>
+                    <span class="faq-question"
+                      >Do I get the same sequence every time?</span
+                    >
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                  </button>
+                  <div
+                    class="faq-a"
+                    id="faq-a-7"
+                    role="region"
+                    aria-labelledby="faq-btn-7"
+                    hidden
+                  >
+                    <p>
+                      No. Sessions are built around what you need that week, not
+                      a repeating class plan. Some things are practiced again
+                      and again on purpose—that's how mastery develops—but every
+                      session evolves with you.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button
+                    class="faq-q"
+                    aria-expanded="false"
+                    aria-controls="faq-a-8"
+                    id="faq-btn-8"
+                  >
+                    <span class="faq-num">08</span>
+                    <span class="faq-question"
+                      >How is this different from a regular yoga class?</span
+                    >
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                  </button>
+                  <div
+                    class="faq-a"
+                    id="faq-a-8"
+                    role="region"
+                    aria-labelledby="faq-btn-8"
+                    hidden
+                  >
+                    <p>
+                      There's no fixed sequence and no group. Every session is
+                      built around you, beginning with a real conversation about
+                      your life—not a class plan that everyone follows.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button
+                    class="faq-q"
+                    aria-expanded="false"
+                    aria-controls="faq-a-9"
+                    id="faq-btn-9"
+                  >
+                    <span class="faq-num">09</span>
+                    <span class="faq-question"
+                      >What if I'm dealing with an injury or health
+                      condition?</span
+                    >
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                  </button>
+                  <div
+                    class="faq-a"
+                    id="faq-a-9"
+                    role="region"
+                    aria-labelledby="faq-btn-9"
+                    hidden
+                  >
+                    <p>
+                      Mention it during the intro call. Every session is built
+                      around your individual needs, so injuries, health
+                      conditions, or physical limitations are part of the
+                      conversation from the very beginning.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button
+                    class="faq-q"
+                    aria-expanded="false"
+                    aria-controls="faq-a-10"
+                    id="faq-btn-10"
+                  >
+                    <span class="faq-num">10</span>
+                    <span class="faq-question"
+                      >I'm not based in India — can I still book a
+                      session?</span
+                    >
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                  </button>
+                  <div
+                    class="faq-a"
+                    id="faq-a-10"
+                    role="region"
+                    aria-labelledby="faq-btn-10"
+                    hidden
+                  >
+                    <p>
+                      Yes. All sessions are held online over Zoom, so location
+                      isn't a barrier. We'll simply find a time that works
+                      across our time zones.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button
+                    class="faq-q"
+                    aria-expanded="false"
+                    aria-controls="faq-a-11"
+                    id="faq-btn-11"
+                  >
+                    <span class="faq-num">11</span>
+                    <span class="faq-question"
+                      >Is what I share with you confidential?</span
+                    >
+                    <span class="faq-toggle" aria-hidden="true"></span>
+                  </button>
+                  <div
+                    class="faq-a"
+                    id="faq-a-11"
+                    role="region"
+                    aria-labelledby="faq-btn-11"
+                    hidden
+                  >
+                    <p>
+                      Yes. Anything you share during the intro call, intake
+                      conversation, or sessions remains confidential. If
+                      something comes up that's beyond what a yoga practice can
+                      support, I'll tell you honestly and help you find the
+                      appropriate kind of support.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
+        <!-- <section id="contact"></section> -->
+        <!-- ============================================================
+     9. BOOK INTRO CALL + CONTACT FORM — Netlify Forms ready
+     Left column: eyebrow → heading → rule → copy → dot list (matches
+     approach/offer section rhythm, no centered banner).
+     Right column: form with per-field inline error messages.
 
-          <div class="hero-scroll-cue" aria-hidden="true">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path
-                d="M8 3V13M8 13L4 9M8 13L12 9"
-                stroke="#C4703A"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+     NETLIFY FORMS: name="contact" + data-netlify="true" + hidden
+     form-name input + honeypot field required for Netlify's build-bot
+     to detect and register this form.
+     ============================================================ -->
+        <section class="contact" id="contact">
+          <div class="container-editorial contact-grid">
+            <div class="contact-copy">
+              <span class="contact-eyebrow"
+                >LET'S START WITH A CONVERSATION</span
+              >
+              <h2 class="contact-copy-title">Book Your Intro Call</h2>
+              <p class="contact-copy-text">
+                A free 15-minute call to understand your goals, answer your
+                questions, and see if we're the right fit for your journey.
+              </p>
+
+              <ul class="contact-points">
+                <li>No commitment, just a simple conversation</li>
+                <li>Understand your needs and intentions</li>
+                <li>Ask your questions, get clarity</li>
+                <li>Decide together if we're the right fit</li>
+              </ul>
+            </div>
+
+            <div class="contact-form-wrap">
+              <p class="contact-form-lede">
+                Fill out the form and I'll get back to you shortly.
+              </p>
+
+              <form
+                class="contact-form"
+                id="contactForm"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                novalidate
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p class="visually-hidden">
+                  <label>
+                    Don't fill this out if you're human:
+                    <input name="bot-field" tabindex="-1" autocomplete="off" />
+                  </label>
+                </p>
+
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="cf-name">Name</label>
+                    <input
+                      type="text"
+                      id="cf-name"
+                      name="name"
+                      placeholder="Your name"
+                      required
+                    />
+                    <span class="field-error" id="cf-name-error"></span>
+                  </div>
+                  <div class="form-field">
+                    <label for="cf-email">Email</label>
+                    <input
+                      type="email"
+                      id="cf-email"
+                      name="email"
+                      placeholder="Your email"
+                      required
+                    />
+                    <span class="field-error" id="cf-email-error"></span>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="cf-phone">Phone (Optional)</label>
+                  <input
+                    type="tel"
+                    id="cf-phone"
+                    name="phone"
+                    placeholder="Your phone number"
+                  />
+                </div>
+
+                <div class="form-field last-textarea">
+                  <label for="cf-message">How can I support you?</label>
+                  <textarea
+                    id="cf-message"
+                    name="message"
+                    rows="3"
+                    placeholder="Your message..."
+                    required
+                  ></textarea>
+                  <span class="field-error" id="cf-message-error"></span>
+                </div>
+
+                <p
+                  class="contact-form-status"
+                  id="contactFormStatus"
+                  role="status"
+                  aria-live="polite"
+                ></p>
+
+                <button
+                  type="submit"
+                  class="btn-editorial btn-primary-editorial contact-submit"
+                >
+                  Request Your Free Intro Call
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8H13M13 8L9 4M13 8L9 12"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <p class="contact-form-note">
+                  <svg
+                    width="13"
+                    height="13"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <rect
+                      x="3.5"
+                      y="7"
+                      width="9"
+                      height="6.5"
+                      rx="1.2"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                    />
+                    <path
+                      d="M5.5 7V4.8C5.5 3.25 6.7 2 8 2C9.3 2 10.5 3.25 10.5 4.8V7"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                  Your information is safe and will never be shared.
+                </p>
+              </form>
+            </div>
           </div>
         </section>
 
-        <!-- ================================================================
-           Sections below are structural placeholders per Project Lock v3.0
-           UX Flow. Content build proceeds section-by-section after Hero
-           sign-off. Do not remove — anchors are wired from the nav above.
-           ================================================================ -->
-        <!-- <section id="offer"></section> -->
-        <!-- <section id="approach"></section> -->
-        <!-- <section id="about"></section> -->
-        <!-- <section id="sessions"></section> -->
-        <!-- <section id="credentials"></section> -->
-        <!-- <section id="gallery"></section> -->
-        <!-- <section id="faq"></section> -->
-        <!-- <section id="contact"></section> -->
+        <!-- Footer Section-->
+        <!-- ============================================================
+     10. FOOTER — dark contrast section, editorial (Project Lock v3.0)
+     ============================================================ -->
+        <footer class="site-footer" id="siteFooter">
+          <div class="container-editorial footer-grid">
+            <div class="footer-brand">
+              <h2 class="footer-logo">Sync in <span>Joy</span></h2>
+              <span class="footer-rule" aria-hidden="true"></span>
+              <p class="footer-eyebrow">PERSONALISED YOGA &amp; WELLNESS</p>
+              <p class="footer-tagline">
+                Small practices.<br />Lasting shifts.
+              </p>
+            </div>
+
+            <div class="footer-contact">
+              <a class="footer-row" href="mailto:syncinjoy@sjyogiccenter.com">
+                <span class="footer-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                    <rect
+                      x="2"
+                      y="4"
+                      width="16"
+                      height="12"
+                      rx="1.5"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                    />
+                    <path
+                      d="M2.5 5L10 11L17.5 5"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <span>syncinjoy@sjyogiccenter.com</span>
+              </a>
+
+              <a
+                class="footer-row"
+                href="https://instagram.com/syncinjoy"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="footer-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                    <rect
+                      x="3"
+                      y="3"
+                      width="14"
+                      height="14"
+                      rx="4"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                    />
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="3.2"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                    />
+                    <circle cx="14.3" cy="5.7" r="0.9" fill="currentColor" />
+                  </svg>
+                </span>
+                <span>@syncinjoy</span>
+              </a>
+
+              <div class="footer-row">
+                <span class="footer-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 18C10 18 16 12.7 16 8.2C16 4.8 13.3 2 10 2C6.7 2 4 4.8 4 8.2C4 12.7 10 18 10 18Z"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                    />
+                    <circle
+                      cx="10"
+                      cy="8.2"
+                      r="2.2"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                    />
+                  </svg>
+                </span>
+                <span>Based in Mumbai</span>
+              </div>
+
+              <div class="footer-row">
+                <span class="footer-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="7.5"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                    />
+                    <path
+                      d="M2.5 10H17.5M10 2.5C12 4.7 13 7.2 13 10C13 12.8 12 15.3 10 17.5C8 15.3 7 12.8 7 10C7 7.2 8 4.7 10 2.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                    />
+                  </svg>
+                </span>
+                <span>Sessions Worldwide via Zoom</span>
+              </div>
+            </div>
+
+            <div class="footer-cta">
+              <a href="#contact" class="footer-cta-link">
+                Book a Free 15-Min Intro Call
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8H13M13 8L9 4M13 8L9 12"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="container-editorial footer-bottom">
+            <p>&copy; 2026 Sync in Joy</p>
+            <p>Designed &amp; Developed by The B Factor Digital</p>
+          </div>
+        </footer>
       </main>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
