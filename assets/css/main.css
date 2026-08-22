@@ -838,15 +838,11 @@ button:focus-visible,
 }
 
 @media (min-width: 992px) {
-  /* .hero-grid {
-    grid-template-columns: 46% 54%;
-  } */
+ 
   .hero-visual-spacer {
     display: block;
   }
-  .hero-scroll-cue {
-    display: none;
-  }
+ 
 }
 
 @keyframes bob {
@@ -972,6 +968,9 @@ button:focus-visible,
     }
 .hero-meta{
   gap:var(--space-sm);
+  }
+  .hero-scroll-cue{
+    display:none;
   }
 }
 
