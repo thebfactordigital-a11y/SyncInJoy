@@ -643,7 +643,6 @@ button:focus-visible,
 .hero-scroll-cue {
   position: absolute;
   left: 50%;
-  bottom: var(--space-md);
   transform: translateX(-50%);
   width: 56px;
   height: 56px;
