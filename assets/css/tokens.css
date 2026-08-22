@@ -1,70 +1,69 @@
 /* ==========================================================================
-   SYNC IN JOY — LOCKED DESIGN TOKENS
-   Source of truth: Project Lock v3.0 + Final Website Content + Design Refinement v1.0
-   DO NOT override these values per-section. Every section pulls from here.
+   SYNC IN JOY — TOKENS
    ========================================================================== */
 
 :root {
   /* ----------------------------------------------------------------------
-     COLOR PALETTE (logo-derived, locked)
-     Rule: Orange leads (primary), Blue is secondary — never reversed.
+     COLOR PALETTE — primary, secondary, accent
      ---------------------------------------------------------------------- */
-  --color-clay-orange: #c4703a; /* primary accent — buttons, links, hero accents, dividers */
-  --color-clay-orange-dark: #a85d2e; /* hover/active state, derived, not a new brand color */
-  --color-muted-blue: #4b5e8c; /* secondary accent — secondary buttons, quiet highlights */
-  --color-sage: #8a9678; /* tertiary accent — small labels, icons, sparingly */
-  --color-cream: #f5f0e8; /* main background — warm, not stark white */
-  --color-ink: #2e2a26; /* body copy + headings — warm charcoal, not pure black */
+  --color-clay-orange: #c4703a; /* primary accent */
+  --color-clay-orange-dark: #a85d2e; /* hover/active state */
+  --color-muted-blue: #4b5e8c; /* secondary accent  */
+  --color-sage: #8a9678; /* tertiary accent  */
+  --color-cream: #f5f0e8; /* main background  */
+  --color-ink: #2e2a26; /* body copy + headings */
 
-  /* Functional aliases (semantic naming for use in components) */
+  /* Functional aliases */
   --color-bg: var(--color-cream);
   --color-text: var(--color-ink);
   --color-primary: var(--color-clay-orange);
   --color-primary-hover: var(--color-clay-orange-dark);
   --color-secondary: var(--color-muted-blue);
   --color-accent: var(--color-sage);
-  --color-surface: #ffffff; /* utility white for cards/forms where needed, used sparingly */
+  --color-surface: #ffffff;
   --color-border: rgba(46, 42, 38, 0.12);
+  --color-bg-warm: #f0e9dd;
+  --color-error: #a83a3a;
+  --color-primary-rgb: 196, 112, 58;
+  --color-black-rgb: 0, 0, 0;
 
   /* ----------------------------------------------------------------------
-     TYPOGRAPHY (locked)
+     TYPOGRAPHY 
      Headings: Cormorant Garamond | Body: Work Sans
      ---------------------------------------------------------------------- */
-  --font-heading: "Cormorant Garamond", serif;
-  --font-body: "Work Sans", sans-serif;
+
+  --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Work Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Locked size ranges — clamp() used to stay within the approved min/max */
-  --fs-h1: clamp(40px, 4vw + 1rem, 56px); /* H1 / Hero: 40–56px */
-  --fs-h2: clamp(28px, 2vw + 1rem, 34px); /* H2 / Section titles: 28–34px */
-  --fs-h3: clamp(
-    22px,
-    1.4vw + 1rem,
-    28px
-  ); /* derived sub-heading, not in lock doc but consistent scale */
+  --fs-h1: clamp(40px, 4vw + 1rem, 56px);
+  --fs-h2: clamp(28px, 2vw + 1rem, 34px);
+  --fs-h3: clamp(22px, 1.4vw + 1rem, 28px);
   --fs-h4: clamp(18px, 1.2vw + 1rem, 22px);
-  --fs-body: clamp(16px, 0.3vw + 1rem, 18px); /* Body text: 16–18px */
-  --fs-label: clamp(14px, 0.2vw + 1rem, 16px); /* Buttons / labels: 14–16px */
+  --fs-body: clamp(16px, 0.3vw + 1rem, 18px);
+  --fs-label: clamp(14px, 0.2vw + 1rem, 16px);
   --fs-label-sm: clamp(10px, 0.1vw + 1rem, 12px);
 
-  --lh-body: 1.6; /* Body line-height: locked */
+  --lh-body: 1.6;
   --lh-heading: 1.15;
 
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
+  --fw-bold: 900;
 
-  --ls-label: 0.5px; /* Buttons/labels letter-spacing: +0.5px, locked */
+  --ls-label: 0.5px;
   --ls-label-md: 3px;
+
   /* ----------------------------------------------------------------------
-     LAYOUT / GRID (locked)
-     Desktop canvas 1440px, centered 1280px container, 12-column grid
+     LAYOUT / GRID 
      ---------------------------------------------------------------------- */
   --canvas-max: 1440px;
   --container-max: 1280px;
   --grid-columns: 12;
   --grid-gutter: 24px;
 
-  /* Spacing scale — generous whitespace per Visual Direction lock */
+  /* Spacing scale*/
   --space-3xs: 4px;
   --space-2xs: 8px;
   --space-xs: 12px;
@@ -77,22 +76,24 @@
   --space-2xl: 96px;
   --space-3xl: 140px;
 
-  /* Section vertical rhythm — "generous white space between sections" */
+  /* Section vertical rhythm */
   --section-padding-y: clamp(64px, 8vw, 140px);
 
   /* ----------------------------------------------------------------------
      RADIUS / ELEVATION
-     Editorial, not SaaS — restrained radius, no glassmorphism/blobs
      ---------------------------------------------------------------------- */
   --radius-sm: 2px;
   --radius-md: 4px;
   --radius-lg: 8px;
   --radius-xl: 14px;
+  --radius-2xl: 24px;
+  --radius-half-pill: 50px;
+  --radius-half-pill-percent: 50%;
   --radius-pill: 100px; /* for pill buttons only */
   --shadow-soft: 0 12px 32px rgba(46, 42, 38, 0.08);
 
   /* ----------------------------------------------------------------------
-     MOTION — deliberately minimal (no parallax / auto-play / pop-ups)
+     MOTION
      ---------------------------------------------------------------------- */
   --ease-editorial: cubic-bezier(0.25, 0.1, 0.25, 1);
   --duration-fast: 150ms;
@@ -107,13 +108,19 @@
   --z-toggle: 1150;
   --z-modal: 1200;
 
-  /* Approach section — was hardcoded, now tokenized */
+  /* Approach section tokens */
   --fs-quote-mark: 34px;
   --approach-min-h: 640px;
   --approach-mobile-visual-h: 320px;
   --approach-img-pos: 60% center;
+  --approach-top-offset: 24px;
 
-  /* Footer */
+  /* Footer tokens */
   --color-footer-bg: var(--color-ink);
   --color-footer-text: var(--color-cream);
+  --color-footer-icon: rgba(245, 240, 232, 0.75);
+
+  /* Back-to-top positioning tokens */
+  --space-btt-desktop: var(--space-md); /* 24px */
+  --space-btt-mobile: var(--space-sm); /* 16px */
 }
