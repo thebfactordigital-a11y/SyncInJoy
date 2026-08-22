@@ -967,10 +967,12 @@ button:focus-visible,
   .hero{
     padding-top: calc(var(--space-sm) + 104px);
   }
-      .hero-subhead {
+  .hero-subhead {
        margin-bottom: var(--space-lg);
     }
-}
+.hero-meta{
+  gap:var(--space-sm);
+  }
 }
 
 @media (max-width: 400px) {
