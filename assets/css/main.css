@@ -960,6 +960,9 @@ button:focus-visible,
     width: 86%;
     padding-top: 80px;
   }
+  .hero{
+    padding-top: calc(var(--space-sm) + 104px);
+  }
 }
 
 @media (max-width: 400px) {
