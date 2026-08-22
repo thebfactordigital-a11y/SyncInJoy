@@ -930,6 +930,9 @@ button:focus-visible,
   .hero-bg picture {
     position: relative;
   }
+  .hero-scroll-cue {
+    display: none;
+  }
 }
 
 @media (max-width: 599.98px) {
