@@ -174,14 +174,20 @@
   ) {
     var observer = new IntersectionObserver(
       function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            var id = entry.target.getAttribute("id");
-            navAnchors.forEach(function (a) {
-              a.classList.toggle("active", a.getAttribute("href") === "#" + id);
-            });
-          }
-        });
+       entries.forEach(function (entry) {
+  if (entry.isIntersecting) {
+    var id = entry.target.getAttribute("id");
+    navAnchors.forEach(function (a) {
+      var isActive = a.getAttribute("href") === "#" + id;
+      a.classList.toggle("active", isActive);
+      if (isActive) {
+        a.setAttribute("aria-current", "true");
+      } else {
+        a.removeAttribute("aria-current");
+      }
+    });
+  }
+});
       },
       { rootMargin: "-45% 0px -45% 0px", threshold: 0 },
     );
