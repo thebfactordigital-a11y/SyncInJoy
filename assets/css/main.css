@@ -412,6 +412,7 @@ button:focus-visible,
 .brand img {
   height: var(--space-2xl);
   width: auto;
+  margin-top: var(--space-2xs);
 }
 
 /* Nav row */
