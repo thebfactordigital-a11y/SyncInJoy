@@ -2997,7 +2997,7 @@ a.footer-row:hover .footer-icon {
   border-top: 1px solid rgba(245, 240, 232, 0.14);
   padding: var(--space-md) var(--space-md);
   font-size: var(--fs-label-sm);
-  color: rgba(245, 240, 232, 0.6);
+  color: rgba(245, 240, 232, 0.75);
 }
 .footer-bottom p {
   margin: 0;
