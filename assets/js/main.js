@@ -14,7 +14,9 @@
   /* ---------------------------------------------------------------------
     1. Mobile / tablet off-canvas nav 
      --------------------------------------------------------------------- */
-  var scrollY = 0;
+
+   
+   var scrollY = 0;
   var lastFocusedEl = null;
 
   function getFocusableEls() {
@@ -152,12 +154,43 @@
   /* ---------------------------------------------------------------------
     1.1  Sticky header once page has scrolled
      --------------------------------------------------------------------- */
-  function onScroll() {
+ /* function onScroll() {
     if (!header) return;
     header.classList.toggle("is-scrolled", window.scrollY > 12);
   }
   window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  onScroll();  */
+
+   /* ---------------------------------------------------------------------
+    1.1  Sticky header + back-to-top — merged, rAF-throttled scroll handler
+     --------------------------------------------------------------------- */
+  var backToTopBtn = document.getElementById("backToTop");
+  var scrollTicking = false;
+
+  function updateOnScroll() {
+    var y = window.scrollY;
+    if (header) header.classList.toggle("is-scrolled", y > 12);
+    if (backToTopBtn) {
+      backToTopBtn.classList.toggle("is-visible", y > window.innerHeight * 0.8);
+    }
+    scrollTicking = false;
+  }
+
+  function onScroll() {
+    if (!scrollTicking) {
+      requestAnimationFrame(updateOnScroll);
+      scrollTicking = true;
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  updateOnScroll();
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 
   /* ---------------------------------------------------------------------
     1.2 Active nav link tracking via IntersectionObserver
@@ -274,7 +307,7 @@
     BACK TO TOP
    ========================================================================== */
 
-  (function () {
+ /* (function () {
     const btn = document.getElementById("backToTop");
     if (!btn) return;
 
@@ -292,7 +325,7 @@
     btn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  })();
+  })();  */
 
   /* ==========================================================================
    10. CONTACT FORM VALIDATION
