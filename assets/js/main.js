@@ -460,6 +460,10 @@
           clearFieldError(nameInput, nameError);
           clearFieldError(emailInput, emailError);
           clearFieldError(messageInput, messageError);
+
+          // GTM: fire only on a real, validated, successful submission
+          window.dataLayer = window.dataLayer || [];
+          dataLayer.push({ event: "form_submit_success" });
         })
         .catch(function (err) {
           if (err.name === "AbortError") {
